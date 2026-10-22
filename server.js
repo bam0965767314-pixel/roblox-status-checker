@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json({ limit: "10kb" }));
 app.get("/health", (_req, res) => res.json({ ok: true }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 app.post("/api/check", async (req, res) => {
   const rawId = String(req.body?.userId ?? "").trim();
