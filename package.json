@@ -1,0 +1,13 @@
+{
+  "name": "roblox-status-checker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roblox user online status checker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

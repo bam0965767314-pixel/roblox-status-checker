@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <title>Roblox Status Checker</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div class="logo">R</div>
+      <div>
+        <p class="eyebrow">PLAYER TRACKER</p>
+        <h1>ROBLOX <span>STATUS</span></h1>
+      </div>
+      <div class="live"><i></i> CHECKER</div>
+    </header>
+
+    <section class="panel">
+      <p class="eyebrow">ONLINE STATUS LOOKUP</p>
+      <h2>ตรวจสอบสถานะผู้เล่น</h2>
+      <p class="sub">ใส่ Roblox User ID เพื่อเช็กสถานะล่าสุดที่ Roblox เปิดเผย</p>
+
+      <form id="check-form">
+        <label for="user-id">ROBLOX USER ID</label>
+        <div class="input-row">
+          <input id="user-id" name="userId" type="text" inputmode="numeric"
+                 pattern="[0-9]+" placeholder="เช่น 123456789" autocomplete="off" required>
+          <button id="check-button" type="submit">ตรวจสอบ</button>
+        </div>
+      </form>
+
+      <p id="message" class="message" role="status" aria-live="polite">พร้อมตรวจสอบ</p>
+
+      <article id="result" class="result hidden">
+        <div class="result-top">
+          <div class="avatar" id="avatar-letter">R</div>
+          <div class="user-info">
+            <p class="eyebrow">PLAYER FOUND</p>
+            <h3 id="display-name">Player</h3>
+            <p id="username" class="username">@username</p>
+            <p id="user-id-label" class="id-label">User ID: —</p>
+          </div>
+        </div>
+        <div class="status-line">
+          <span id="status-dot" class="status-dot offline"></span>
+          <div>
+            <strong id="status-text">OFFLINE</strong>
+            <p id="status-detail">สถานะผู้เล่น</p>
+          </div>
+        </div>
+        <div class="result-bottom">
+          <span id="checked-at">ตรวจสอบล่าสุด: —</span>
+          <a id="profile-link" href="#" target="_blank" rel="noopener noreferrer">เปิดโปรไฟล์ ↗</a>
+        </div>
+      </article>
+
+      <p class="note">หมายเหตุ: ถ้าผู้เล่นซ่อนสถานะออนไลน์ในการตั้งค่าความเป็นส่วนตัว Roblox อาจแสดงเหมือนออฟไลน์ได้</p>
+    </section>
+    <footer>Fan-made tool · ไม่ใช่เว็บไซต์ทางการของ Roblox</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
